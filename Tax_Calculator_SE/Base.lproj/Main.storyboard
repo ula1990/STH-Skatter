@@ -1,26 +1,771 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="mkr-LM-2Sg">
+    <device id="retina3_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="HelveticaNeue.ttc">
+            <string>HelveticaNeue</string>
+        </array>
+        <array key="HelveticaNeueLights.ttc">
+            <string>HelveticaNeue-Light</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Tax_Calculator_SE" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HwV-1m-mwK">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jaS-HJ-IK9">
+                                <rect key="frame" x="0.0" y="361" width="320" height="119"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2HF-Oh-bMz" customClass="RoundButton" customModule="Tax_Calculator_SE" customModuleProvider="target">
+                                        <rect key="frame" x="2" y="2" width="104" height="27.5"/>
+                                        <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="0.10463934075342465" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="25"/>
+                                        <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <size key="titleShadowOffset" width="40" height="40"/>
+                                        <state key="normal" title="9">
+                                            <color key="titleColor" red="0.99195677042007446" green="0.99622899293899536" blue="0.99192315340042114" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                <real key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                <color key="value" red="1" green="1" blue="1" alpha="0.38321382705479451" colorSpace="calibratedRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="3"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="numButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="PQI-96-j0n"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h8d-bC-10M" customClass="RoundButton" customModule="Tax_Calculator_SE" customModuleProvider="target">
+                                        <rect key="frame" x="108" y="2" width="104" height="27.5"/>
+                                        <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="0.10463934075342465" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="25"/>
+                                        <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <size key="titleShadowOffset" width="40" height="40"/>
+                                        <state key="normal" title="8">
+                                            <color key="titleColor" red="0.99195677042007446" green="0.99622899293899536" blue="0.99192315340042114" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="3"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                <real key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                <color key="value" red="1" green="1" blue="1" alpha="0.38321382705479451" colorSpace="calibratedRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="numButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="UFS-EW-5On"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qY7-Qa-4t8" customClass="RoundButton" customModule="Tax_Calculator_SE" customModuleProvider="target">
+                                        <rect key="frame" x="214" y="2" width="104" height="27.5"/>
+                                        <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="0.10463934075342465" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="25"/>
+                                        <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <size key="titleShadowOffset" width="40" height="40"/>
+                                        <state key="normal" title="7">
+                                            <color key="titleColor" red="0.99195677042007446" green="0.99622899293899536" blue="0.99192315340042114" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="3"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                <real key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                <color key="value" red="1" green="1" blue="1" alpha="0.38321382705479451" colorSpace="calibratedRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="numButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1Sx-4a-vIT"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kkn-rS-ma3" customClass="RoundButton" customModule="Tax_Calculator_SE" customModuleProvider="target">
+                                        <rect key="frame" x="2" y="31.5" width="104" height="27"/>
+                                        <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="0.10463934075342465" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="25"/>
+                                        <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <size key="titleShadowOffset" width="40" height="40"/>
+                                        <state key="normal" title="6">
+                                            <color key="titleColor" red="0.99195677042007446" green="0.99622899293899536" blue="0.99192315340042114" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="3"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                <real key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                <color key="value" red="1" green="1" blue="1" alpha="0.38321382705479451" colorSpace="calibratedRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="numButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="28P-98-Rx1"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SzH-AY-hhc" customClass="RoundButton" customModule="Tax_Calculator_SE" customModuleProvider="target">
+                                        <rect key="frame" x="214" y="31.5" width="104" height="27"/>
+                                        <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="0.10463934075342465" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="25"/>
+                                        <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <size key="titleShadowOffset" width="40" height="40"/>
+                                        <state key="normal" title="4">
+                                            <color key="titleColor" red="0.99195677042007446" green="0.99622899293899536" blue="0.99192315340042114" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="3"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                <real key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                <color key="value" red="1" green="1" blue="1" alpha="0.38321382705479451" colorSpace="calibratedRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="numButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="sMR-w3-CuO"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oFV-Oq-4nE" customClass="RoundButton" customModule="Tax_Calculator_SE" customModuleProvider="target">
+                                        <rect key="frame" x="2" y="60.5" width="104" height="27.5"/>
+                                        <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="0.10463934075342465" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="25"/>
+                                        <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <size key="titleShadowOffset" width="40" height="40"/>
+                                        <state key="normal" title="3">
+                                            <color key="titleColor" red="0.99195677042007446" green="0.99622899293899536" blue="0.99192315340042114" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="3"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                <real key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                <color key="value" red="1" green="1" blue="1" alpha="0.38321382705479451" colorSpace="calibratedRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="numButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dhs-BX-cxs"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Xe-K2-rZ0" customClass="RoundButton" customModule="Tax_Calculator_SE" customModuleProvider="target">
+                                        <rect key="frame" x="108" y="60.5" width="104" height="27.5"/>
+                                        <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="0.10463934075342465" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="25"/>
+                                        <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <size key="titleShadowOffset" width="40" height="40"/>
+                                        <state key="normal" title="2">
+                                            <color key="titleColor" red="0.99195677042007446" green="0.99622899293899536" blue="0.99192315340042114" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="3"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                <real key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                <color key="value" red="1" green="1" blue="1" alpha="0.38321382705479451" colorSpace="calibratedRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="numButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Y2g-Tq-HSp"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f6l-Wp-dMY" customClass="RoundButton" customModule="Tax_Calculator_SE" customModuleProvider="target">
+                                        <rect key="frame" x="214" y="60.5" width="104" height="27.5"/>
+                                        <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="0.10463934075342465" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="25"/>
+                                        <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <size key="titleShadowOffset" width="40" height="40"/>
+                                        <state key="normal" title="1">
+                                            <color key="titleColor" red="0.99195677042007446" green="0.99622899293899536" blue="0.99192315340042114" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="3"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                <real key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                <color key="value" red="1" green="1" blue="1" alpha="0.38321382705479451" colorSpace="calibratedRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="numButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="mEJ-Eh-opi"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2iE-w3-Uke" customClass="RoundButton" customModule="Tax_Calculator_SE" customModuleProvider="target">
+                                        <rect key="frame" x="108" y="90" width="104" height="27"/>
+                                        <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="0.10463934075342465" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="25"/>
+                                        <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <size key="titleShadowOffset" width="40" height="40"/>
+                                        <state key="normal" title="0">
+                                            <color key="titleColor" red="0.99195677042007446" green="0.99622899293899536" blue="0.99192315340042114" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="3"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                <real key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                <color key="value" red="1" green="1" blue="1" alpha="0.38321382705479451" colorSpace="calibratedRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="numButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="FKc-cY-Ly9"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qgk-BS-zqx" customClass="RoundButton" customModule="Tax_Calculator_SE" customModuleProvider="target">
+                                        <rect key="frame" x="214" y="90" width="104" height="27"/>
+                                        <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="0.10463934075342465" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="25"/>
+                                        <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <size key="titleShadowOffset" width="40" height="40"/>
+                                        <state key="normal" title="Clear">
+                                            <color key="titleColor" red="0.99195677042007446" green="0.99622899293899536" blue="0.99192315340042114" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="3"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                <real key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                <color key="value" red="1" green="1" blue="1" alpha="0.38321382705479451" colorSpace="calibratedRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="clearButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qRa-aT-lzb"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A2w-Zp-qoc" customClass="RoundButton" customModule="Tax_Calculator_SE" customModuleProvider="target">
+                                        <rect key="frame" x="2" y="90" width="104" height="27"/>
+                                        <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="0.10463934075342465" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="25"/>
+                                        <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <size key="titleShadowOffset" width="40" height="40"/>
+                                        <state key="normal" title="Share">
+                                            <color key="titleColor" red="0.99195677042007446" green="0.99622899293899536" blue="0.99192315340042114" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="3"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                <real key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                <color key="value" red="1" green="1" blue="1" alpha="0.38321382705479451" colorSpace="calibratedRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="shareButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6R1-0c-zht"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7wV-Ic-iEB" customClass="RoundButton" customModule="Tax_Calculator_SE" customModuleProvider="target">
+                                        <rect key="frame" x="108" y="31.5" width="104" height="27"/>
+                                        <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="0.10463934075342465" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="25"/>
+                                        <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <size key="titleShadowOffset" width="40" height="40"/>
+                                        <state key="normal" title="5">
+                                            <color key="titleColor" red="0.99195677042007446" green="0.99622899293899536" blue="0.99192315340042114" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="3"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                <real key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                <color key="value" red="1" green="1" blue="1" alpha="0.38321382705479451" colorSpace="calibratedRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="numButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Dok-Ae-hEE"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="oFV-Oq-4nE" firstAttribute="width" secondItem="2HF-Oh-bMz" secondAttribute="width" id="0Ul-JS-wiy"/>
+                                    <constraint firstAttribute="trailing" secondItem="SzH-AY-hhc" secondAttribute="trailing" constant="2" id="2tj-Nx-qFd"/>
+                                    <constraint firstItem="qY7-Qa-4t8" firstAttribute="leading" secondItem="h8d-bC-10M" secondAttribute="trailing" constant="2" id="3E6-uw-oiJ"/>
+                                    <constraint firstItem="kkn-rS-ma3" firstAttribute="height" secondItem="2HF-Oh-bMz" secondAttribute="height" id="42Q-s8-8YF"/>
+                                    <constraint firstItem="0Xe-K2-rZ0" firstAttribute="top" secondItem="7wV-Ic-iEB" secondAttribute="bottom" constant="2" id="4yP-oM-wys"/>
+                                    <constraint firstItem="h8d-bC-10M" firstAttribute="height" secondItem="2HF-Oh-bMz" secondAttribute="height" id="5Eu-yk-KOJ"/>
+                                    <constraint firstItem="oFV-Oq-4nE" firstAttribute="height" secondItem="2HF-Oh-bMz" secondAttribute="height" id="5RG-rb-3zF"/>
+                                    <constraint firstItem="7wV-Ic-iEB" firstAttribute="leading" secondItem="kkn-rS-ma3" secondAttribute="trailing" constant="2" id="6ZS-Tq-GMW"/>
+                                    <constraint firstItem="kkn-rS-ma3" firstAttribute="width" secondItem="2HF-Oh-bMz" secondAttribute="width" id="7a1-Kr-dJ8"/>
+                                    <constraint firstItem="qgk-BS-zqx" firstAttribute="leading" secondItem="2iE-w3-Uke" secondAttribute="trailing" constant="2" id="CZ7-OF-fVk"/>
+                                    <constraint firstItem="A2w-Zp-qoc" firstAttribute="top" secondItem="oFV-Oq-4nE" secondAttribute="bottom" constant="2" id="Cuf-yz-KlL"/>
+                                    <constraint firstItem="oFV-Oq-4nE" firstAttribute="leading" secondItem="jaS-HJ-IK9" secondAttribute="leading" constant="2" id="Dof-IV-AcG"/>
+                                    <constraint firstAttribute="trailing" secondItem="qY7-Qa-4t8" secondAttribute="trailing" constant="2" id="EAH-Uq-BNq"/>
+                                    <constraint firstItem="qY7-Qa-4t8" firstAttribute="top" secondItem="jaS-HJ-IK9" secondAttribute="top" constant="2" id="ESy-4g-Wyu"/>
+                                    <constraint firstItem="SzH-AY-hhc" firstAttribute="leading" secondItem="7wV-Ic-iEB" secondAttribute="trailing" constant="2" id="Eth-Yh-EO2"/>
+                                    <constraint firstItem="A2w-Zp-qoc" firstAttribute="leading" secondItem="jaS-HJ-IK9" secondAttribute="leading" constant="2" id="F6A-mx-knL"/>
+                                    <constraint firstItem="7wV-Ic-iEB" firstAttribute="top" secondItem="h8d-bC-10M" secondAttribute="bottom" constant="2" id="FW0-XS-Cec"/>
+                                    <constraint firstItem="oFV-Oq-4nE" firstAttribute="top" secondItem="kkn-rS-ma3" secondAttribute="bottom" constant="2" id="HGv-cn-fYk"/>
+                                    <constraint firstItem="h8d-bC-10M" firstAttribute="top" secondItem="jaS-HJ-IK9" secondAttribute="top" constant="2" id="M3U-U1-G0L"/>
+                                    <constraint firstAttribute="bottom" secondItem="qgk-BS-zqx" secondAttribute="bottom" constant="2" id="NUr-bk-E9c"/>
+                                    <constraint firstItem="qgk-BS-zqx" firstAttribute="width" secondItem="2HF-Oh-bMz" secondAttribute="width" id="NfD-QF-kfo"/>
+                                    <constraint firstAttribute="bottom" secondItem="A2w-Zp-qoc" secondAttribute="bottom" constant="2" id="RFh-k5-i3q"/>
+                                    <constraint firstItem="2iE-w3-Uke" firstAttribute="width" secondItem="2HF-Oh-bMz" secondAttribute="width" id="SiO-Rf-KRl"/>
+                                    <constraint firstAttribute="trailing" secondItem="qgk-BS-zqx" secondAttribute="trailing" constant="2" id="T6d-Fl-LR7"/>
+                                    <constraint firstItem="qY7-Qa-4t8" firstAttribute="width" secondItem="2HF-Oh-bMz" secondAttribute="width" id="TFg-VN-RaT"/>
+                                    <constraint firstItem="kkn-rS-ma3" firstAttribute="top" secondItem="2HF-Oh-bMz" secondAttribute="bottom" constant="2" id="UFw-D6-tb7"/>
+                                    <constraint firstItem="h8d-bC-10M" firstAttribute="width" secondItem="2HF-Oh-bMz" secondAttribute="width" id="Wo6-s6-4wS"/>
+                                    <constraint firstItem="2iE-w3-Uke" firstAttribute="leading" secondItem="A2w-Zp-qoc" secondAttribute="trailing" constant="2" id="WyE-dk-of6"/>
+                                    <constraint firstItem="f6l-Wp-dMY" firstAttribute="top" secondItem="SzH-AY-hhc" secondAttribute="bottom" constant="2" id="ZYh-Vq-VZK"/>
+                                    <constraint firstItem="A2w-Zp-qoc" firstAttribute="height" secondItem="2HF-Oh-bMz" secondAttribute="height" id="ae9-cm-qkg"/>
+                                    <constraint firstItem="2iE-w3-Uke" firstAttribute="top" secondItem="0Xe-K2-rZ0" secondAttribute="bottom" constant="2" id="b2t-uR-gsy"/>
+                                    <constraint firstItem="qgk-BS-zqx" firstAttribute="height" secondItem="2HF-Oh-bMz" secondAttribute="height" id="bTc-aH-3BE"/>
+                                    <constraint firstItem="0Xe-K2-rZ0" firstAttribute="leading" secondItem="oFV-Oq-4nE" secondAttribute="trailing" constant="2" id="cSb-dt-RAi"/>
+                                    <constraint firstItem="SzH-AY-hhc" firstAttribute="width" secondItem="2HF-Oh-bMz" secondAttribute="width" id="ebh-xX-dxa"/>
+                                    <constraint firstAttribute="bottom" secondItem="2iE-w3-Uke" secondAttribute="bottom" constant="2" id="eo2-BQ-7wa"/>
+                                    <constraint firstItem="SzH-AY-hhc" firstAttribute="top" secondItem="qY7-Qa-4t8" secondAttribute="bottom" constant="2" id="f9R-EX-yE6"/>
+                                    <constraint firstItem="kkn-rS-ma3" firstAttribute="leading" secondItem="jaS-HJ-IK9" secondAttribute="leading" constant="2" id="hMq-KM-FlU"/>
+                                    <constraint firstItem="A2w-Zp-qoc" firstAttribute="width" secondItem="2HF-Oh-bMz" secondAttribute="width" id="iCv-GJ-WaH"/>
+                                    <constraint firstAttribute="trailing" secondItem="f6l-Wp-dMY" secondAttribute="trailing" constant="2" id="lpg-sL-9sr"/>
+                                    <constraint firstItem="h8d-bC-10M" firstAttribute="leading" secondItem="2HF-Oh-bMz" secondAttribute="trailing" constant="2" id="mtu-0H-1wY"/>
+                                    <constraint firstItem="0Xe-K2-rZ0" firstAttribute="width" secondItem="2HF-Oh-bMz" secondAttribute="width" id="mu5-Pr-y4C"/>
+                                    <constraint firstItem="f6l-Wp-dMY" firstAttribute="leading" secondItem="0Xe-K2-rZ0" secondAttribute="trailing" constant="2" id="mxu-a3-mua"/>
+                                    <constraint firstItem="2iE-w3-Uke" firstAttribute="height" secondItem="2HF-Oh-bMz" secondAttribute="height" id="nq3-pl-nsY"/>
+                                    <constraint firstItem="7wV-Ic-iEB" firstAttribute="width" secondItem="2HF-Oh-bMz" secondAttribute="width" id="nqm-PT-Aev"/>
+                                    <constraint firstItem="f6l-Wp-dMY" firstAttribute="width" secondItem="2HF-Oh-bMz" secondAttribute="width" id="oTD-l6-cga"/>
+                                    <constraint firstItem="2HF-Oh-bMz" firstAttribute="leading" secondItem="jaS-HJ-IK9" secondAttribute="leading" constant="2" id="osY-ua-xS5"/>
+                                    <constraint firstItem="2HF-Oh-bMz" firstAttribute="top" secondItem="jaS-HJ-IK9" secondAttribute="top" constant="2" id="q5H-Fz-Z5U"/>
+                                    <constraint firstItem="SzH-AY-hhc" firstAttribute="height" secondItem="2HF-Oh-bMz" secondAttribute="height" id="rMk-2Y-HQ5"/>
+                                    <constraint firstItem="qgk-BS-zqx" firstAttribute="top" secondItem="f6l-Wp-dMY" secondAttribute="bottom" constant="2" id="scn-Fp-Ztg"/>
+                                    <constraint firstItem="0Xe-K2-rZ0" firstAttribute="height" secondItem="2HF-Oh-bMz" secondAttribute="height" id="t1T-oS-f1C"/>
+                                    <constraint firstItem="7wV-Ic-iEB" firstAttribute="height" secondItem="2HF-Oh-bMz" secondAttribute="height" id="xRX-hu-SGq"/>
+                                    <constraint firstItem="f6l-Wp-dMY" firstAttribute="height" secondItem="2HF-Oh-bMz" secondAttribute="height" id="ySl-rj-ZV1"/>
+                                    <constraint firstItem="qY7-Qa-4t8" firstAttribute="height" secondItem="2HF-Oh-bMz" secondAttribute="height" id="zul-Yy-Uko"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aWV-TI-g4C" customClass="Roundlabel" customModule="Tax_Calculator_SE" customModuleProvider="target">
+                                <rect key="frame" x="10" y="74" width="184" height="60"/>
+                                <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="0.079783818493150679" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="184" id="B8m-ZY-cZF"/>
+                                    <constraint firstAttribute="height" constant="60" id="kPC-ze-bNx"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="21"/>
+                                <color key="textColor" red="0.99195677042007446" green="0.99622899293899536" blue="0.99192315340042114" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="6"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" red="1" green="1" blue="1" alpha="0.41529323630136988" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rO4-vX-T7l" customClass="Roundlabel" customModule="Tax_Calculator_SE" customModuleProvider="target">
+                                <rect key="frame" x="10" y="139" width="184" height="60"/>
+                                <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="0.079783818493150679" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="184" id="0j2-hx-L1R"/>
+                                    <constraint firstAttribute="height" constant="60" id="ndd-pT-kRc"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="21"/>
+                                <color key="textColor" red="0.55634254220000001" green="0.97934550050000002" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="6"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" red="1" green="1" blue="1" alpha="0.41529323630136988" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ciK-Wz-92M" customClass="Roundlabel" customModule="Tax_Calculator_SE" customModuleProvider="target">
+                                <rect key="frame" x="10" y="269" width="184" height="60"/>
+                                <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="0.079783818493150679" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="184" id="2By-Kn-sVo"/>
+                                    <constraint firstAttribute="height" constant="60" id="g7G-cN-1VC"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="21"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="6"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" red="0.99999600649999998" green="1" blue="1" alpha="0.42029644691780821" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Income" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="155" translatesAutoresizingMaskIntoConstraints="NO" id="Iwo-ky-NVs">
+                                <rect key="frame" x="204" y="74" width="63" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="8GL-EW-nTV"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="63" id="Vr9-Pj-crQ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="18"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Annual" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uhb-BE-SbM">
+                                <rect key="frame" x="204" y="269" width="63" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="63" id="IJh-g2-ATs"/>
+                                    <constraint firstAttribute="height" constant="60" id="q5O-Ac-T4o"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="18"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fsn-SN-Exy" customClass="Roundlabel" customModule="Tax_Calculator_SE" customModuleProvider="target">
+                                <rect key="frame" x="10" y="204" width="184" height="60"/>
+                                <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="0.079783818493150679" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="184" id="YZC-Xe-IHg"/>
+                                    <constraint firstAttribute="height" constant="60" id="jEa-zi-bdk"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="21"/>
+                                <color key="textColor" red="1" green="0.83234566450000003" blue="0.47320586440000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="6"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" red="1" green="1" blue="1" alpha="0.41529323630136988" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Taxes" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mRV-Qr-sbd">
+                                <rect key="frame" x="204" y="204" width="63" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="Iyk-8Z-mUD"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="63" id="YtK-UA-5QH"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="18"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Net pay" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OzT-7H-ElE">
+                                <rect key="frame" x="204" y="139" width="63" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="15O-rP-TOW"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="63" id="3nP-13-k5V"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="18"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tax" translatesAutoresizingMaskIntoConstraints="NO" id="GZU-M3-pqk">
+                                <rect key="frame" x="265" y="209" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="4yZ-Tk-Ccf"/>
+                                    <constraint firstAttribute="width" constant="50" id="J7a-uM-C9p"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="wallet" translatesAutoresizingMaskIntoConstraints="NO" id="TWJ-nc-z7B">
+                                <rect key="frame" x="265" y="144" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="Tbq-9E-JwP"/>
+                                    <constraint firstAttribute="height" constant="50" id="ZGM-GI-8TW"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="year" translatesAutoresizingMaskIntoConstraints="NO" id="NPu-H2-wHh">
+                                <rect key="frame" x="265" y="274" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="T4w-Wn-Osx"/>
+                                    <constraint firstAttribute="width" constant="50" id="ZMH-Qk-tfG"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="income" translatesAutoresizingMaskIntoConstraints="NO" id="jsN-tA-XaP">
+                                <rect key="frame" x="265" y="79" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="KLR-JM-Az6"/>
+                                    <constraint firstAttribute="width" constant="50" id="qnK-cS-wgT"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="rO4-vX-T7l" firstAttribute="top" secondItem="aWV-TI-g4C" secondAttribute="bottom" constant="5" id="0Mw-Jf-qwp"/>
+                            <constraint firstItem="Uhb-BE-SbM" firstAttribute="leading" secondItem="ciK-Wz-92M" secondAttribute="trailing" constant="10" id="1z7-qC-Zcz"/>
+                            <constraint firstItem="jsN-tA-XaP" firstAttribute="trailing" secondItem="TWJ-nc-z7B" secondAttribute="trailing" id="2Xn-u2-tb1"/>
+                            <constraint firstItem="TWJ-nc-z7B" firstAttribute="top" secondItem="jsN-tA-XaP" secondAttribute="bottom" constant="15" id="3an-Oi-W9i"/>
+                            <constraint firstItem="Iwo-ky-NVs" firstAttribute="leading" secondItem="aWV-TI-g4C" secondAttribute="trailing" constant="10" id="5ag-6h-4uO"/>
+                            <constraint firstItem="ciK-Wz-92M" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="10" id="7nL-A2-rO2"/>
+                            <constraint firstItem="Fsn-SN-Exy" firstAttribute="top" secondItem="rO4-vX-T7l" secondAttribute="bottom" constant="5" id="9KF-3Z-AJd"/>
+                            <constraint firstAttribute="trailing" secondItem="TWJ-nc-z7B" secondAttribute="trailing" constant="5" id="9Ki-mN-fC5"/>
+                            <constraint firstItem="Iwo-ky-NVs" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="10" id="ATh-wu-dHK"/>
+                            <constraint firstItem="jaS-HJ-IK9" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="361" id="B5k-u8-ZZd"/>
+                            <constraint firstItem="OzT-7H-ElE" firstAttribute="leading" secondItem="rO4-vX-T7l" secondAttribute="trailing" constant="10" id="CHP-0C-qLO"/>
+                            <constraint firstItem="ciK-Wz-92M" firstAttribute="top" secondItem="Fsn-SN-Exy" secondAttribute="bottom" constant="5" id="DWU-Uq-rgg"/>
+                            <constraint firstItem="jsN-tA-XaP" firstAttribute="leading" secondItem="NPu-H2-wHh" secondAttribute="leading" id="F37-7M-zgc"/>
+                            <constraint firstItem="jsN-tA-XaP" firstAttribute="trailing" secondItem="NPu-H2-wHh" secondAttribute="trailing" id="FEm-Xr-5lJ"/>
+                            <constraint firstItem="Uhb-BE-SbM" firstAttribute="top" secondItem="mRV-Qr-sbd" secondAttribute="bottom" constant="5" id="Fvx-sr-HuT"/>
+                            <constraint firstItem="rO4-vX-T7l" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="10" id="O5o-mc-Tgu"/>
+                            <constraint firstItem="Fsn-SN-Exy" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="10" id="O9g-KC-5t7"/>
+                            <constraint firstItem="jsN-tA-XaP" firstAttribute="centerY" secondItem="Iwo-ky-NVs" secondAttribute="centerY" id="OPf-ll-SPd"/>
+                            <constraint firstItem="NPu-H2-wHh" firstAttribute="top" secondItem="GZU-M3-pqk" secondAttribute="bottom" constant="15" id="Q8f-sd-7nw"/>
+                            <constraint firstItem="jsN-tA-XaP" firstAttribute="leading" secondItem="TWJ-nc-z7B" secondAttribute="leading" id="Rjq-SE-srN"/>
+                            <constraint firstItem="mRV-Qr-sbd" firstAttribute="top" secondItem="OzT-7H-ElE" secondAttribute="bottom" constant="5" id="S4H-8C-JgX"/>
+                            <constraint firstAttribute="bottom" secondItem="HwV-1m-mwK" secondAttribute="bottom" id="UCW-Bq-kDk"/>
+                            <constraint firstItem="GZU-M3-pqk" firstAttribute="centerY" secondItem="mRV-Qr-sbd" secondAttribute="centerY" id="VhG-qt-RKu"/>
+                            <constraint firstItem="HwV-1m-mwK" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="Xlf-tw-48T"/>
+                            <constraint firstAttribute="trailing" secondItem="jaS-HJ-IK9" secondAttribute="trailing" id="YjE-aj-P9L"/>
+                            <constraint firstItem="aWV-TI-g4C" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="10" id="ZYj-y0-d0z"/>
+                            <constraint firstAttribute="trailing" secondItem="GZU-M3-pqk" secondAttribute="trailing" constant="5" id="ZfY-kQ-HEo"/>
+                            <constraint firstItem="Iwo-ky-NVs" firstAttribute="leading" secondItem="aWV-TI-g4C" secondAttribute="trailing" constant="10" id="aA0-0R-Wi1"/>
+                            <constraint firstItem="jsN-tA-XaP" firstAttribute="leading" secondItem="GZU-M3-pqk" secondAttribute="leading" id="bBy-yv-2MR"/>
+                            <constraint firstItem="mRV-Qr-sbd" firstAttribute="leading" secondItem="Fsn-SN-Exy" secondAttribute="trailing" constant="10" id="blg-DG-Fs5"/>
+                            <constraint firstItem="aWV-TI-g4C" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="10" id="gu0-t6-wv9"/>
+                            <constraint firstItem="Iwo-ky-NVs" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="10" id="hwA-fa-bXo"/>
+                            <constraint firstItem="OzT-7H-ElE" firstAttribute="top" secondItem="Iwo-ky-NVs" secondAttribute="bottom" constant="5" id="jqB-QQ-Ca2"/>
+                            <constraint firstItem="jaS-HJ-IK9" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="m5f-3j-qsY"/>
+                            <constraint firstItem="ciK-Wz-92M" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="10" id="nje-E9-PNi"/>
+                            <constraint firstItem="HwV-1m-mwK" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="sw8-58-vAy"/>
+                            <constraint firstAttribute="trailing" secondItem="NPu-H2-wHh" secondAttribute="trailing" constant="5" id="tJx-ix-Ob6"/>
+                            <constraint firstItem="ciK-Wz-92M" firstAttribute="top" secondItem="Fsn-SN-Exy" secondAttribute="bottom" constant="5" id="uRI-x5-Hb5"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="jaS-HJ-IK9" secondAttribute="bottom" id="won-mw-ngU"/>
+                            <constraint firstAttribute="trailing" secondItem="HwV-1m-mwK" secondAttribute="trailing" id="x3Q-Za-ALe"/>
+                            <constraint firstItem="jsN-tA-XaP" firstAttribute="trailing" secondItem="GZU-M3-pqk" secondAttribute="trailing" id="x9S-2H-Jpu"/>
+                            <constraint firstAttribute="trailing" secondItem="jsN-tA-XaP" secondAttribute="trailing" constant="5" id="zjy-aG-yKv"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="caI-8l-Jgo">
+                        <barButtonItem key="leftBarButtonItem" title="About" id="lOs-mS-PT3">
+                            <connections>
+                                <action selector="aboutButton:" destination="BYZ-38-t0r" id="Tsn-Km-Q8Z"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="addInfo" destination="ciK-Wz-92M" id="VLS-KG-HFc"/>
+                        <outlet property="annualLbl" destination="Uhb-BE-SbM" id="nAe-gf-W5A"/>
+                        <outlet property="incomeLbl" destination="Iwo-ky-NVs" id="5cu-77-e3r"/>
+                        <outlet property="input" destination="aWV-TI-g4C" id="Qiz-kT-Ejf"/>
+                        <outlet property="nettLabel" destination="OzT-7H-ElE" id="X7X-jM-CLT"/>
+                        <outlet property="output" destination="rO4-vX-T7l" id="Q0N-CX-jbl"/>
+                        <outlet property="taxLbl" destination="Fsn-SN-Exy" id="F10-kf-SB9"/>
+                        <outlet property="taxResultLbl" destination="mRV-Qr-sbd" id="j88-CT-C7m"/>
+                        <segue destination="4al-CU-djJ" kind="show" identifier="About" id="qb5-8I-U31"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="504.375" y="117.5"/>
+        </scene>
+        <!--Second View Controller-->
+        <scene sceneID="hxV-kE-hF7">
+            <objects>
+                <viewController id="4al-CU-djJ" customClass="SecondViewController" customModule="Tax_Calculator_SE" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="JNB-aX-MpK"/>
+                        <viewControllerLayoutGuide type="bottom" id="CRu-Hj-fUl"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Fjz-Z6-lhG">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" highlightedImage="background" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6lT-LF-OTd">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Uladzislau Daratsiuk" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tqj-Kr-fdd">
+                                <rect key="frame" x="16" y="129" width="288" height="25"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="21"/>
+                                <color key="textColor" red="0.99195677042007446" green="0.99622899293899536" blue="0.99192315340042114" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Stockholm is not your area? let us know if you want the same for your area." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JoS-3C-Jkv">
+                                <rect key="frame" x="16" y="208.5" width="288" height="74.5"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="21"/>
+                                <color key="textColor" red="0.99195677042007446" green="0.99622899293899536" blue="0.99192315340042114" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1n0-bx-IRh" customClass="MailButton" customModule="Tax_Calculator_SE" customModuleProvider="target">
+                                <rect key="frame" x="214" y="291" width="70" height="70"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="70" id="CJw-1A-lt0"/>
+                                    <constraint firstAttribute="width" constant="70" id="He6-kz-cwB"/>
+                                </constraints>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <state key="normal" image="mail"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="sendEmail:" destination="4al-CU-djJ" eventType="touchUpInside" id="puD-cH-3Mu"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s4r-2F-l9k" customClass="MailButton" customModule="Tax_Calculator_SE" customModuleProvider="target">
+                                <rect key="frame" x="36" y="291" width="70" height="70"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="70" id="VYz-fa-7eW"/>
+                                    <constraint firstAttribute="height" constant="70" id="oUN-0L-cVl"/>
+                                </constraints>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <state key="normal" image="facebook">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="facebookButton:" destination="4al-CU-djJ" eventType="touchUpInside" id="T2c-OJ-usZ"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Developed by" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X5t-gF-dd5">
+                                <rect key="frame" x="16" y="98" width="288" height="25"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="21"/>
+                                <color key="textColor" red="0.99195677042007446" green="0.99622899293899536" blue="0.99192315340042114" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o8l-TC-dV3" customClass="MailButton" customModule="Tax_Calculator_SE" customModuleProvider="target">
+                                <rect key="frame" x="125" y="365" width="70" height="70"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="70" id="BzT-TV-LCr"/>
+                                    <constraint firstAttribute="width" constant="70" id="YpD-ba-mxD"/>
+                                </constraints>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <state key="normal" image="twitter">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="twitterButton:" destination="4al-CU-djJ" eventType="touchUpInside" id="buk-jW-Inc"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nhv-Sl-pYA">
+                                <rect key="frame" x="137.5" y="162" width="45" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="45" id="c3U-KS-Yn1"/>
+                                    <constraint firstAttribute="height" constant="45" id="rKz-Hj-gCJ"/>
+                                </constraints>
+                                <state key="normal" image="rate"/>
+                                <connections>
+                                    <action selector="reviewButton:" destination="4al-CU-djJ" eventType="touchUpInside" id="KUq-lr-Ara"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="JoS-3C-Jkv" firstAttribute="centerY" secondItem="Fjz-Z6-lhG" secondAttribute="centerY" constant="5.5" id="6uv-LZ-ng4"/>
+                            <constraint firstItem="JoS-3C-Jkv" firstAttribute="trailing" relation="lessThanOrEqual" secondItem="Fjz-Z6-lhG" secondAttribute="trailingMargin" id="7b9-5D-wqX"/>
+                            <constraint firstAttribute="trailing" secondItem="6lT-LF-OTd" secondAttribute="trailing" id="A13-XE-eWe"/>
+                            <constraint firstItem="s4r-2F-l9k" firstAttribute="leading" secondItem="Fjz-Z6-lhG" secondAttribute="leadingMargin" constant="20" id="CfJ-V7-n62"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="tqj-Kr-fdd" secondAttribute="trailing" id="H4k-ZP-pbO"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="X5t-gF-dd5" secondAttribute="trailing" id="Kup-mv-lug"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="1n0-bx-IRh" secondAttribute="trailing" constant="20" id="Q5a-v8-aLg"/>
+                            <constraint firstItem="nhv-Sl-pYA" firstAttribute="top" secondItem="tqj-Kr-fdd" secondAttribute="bottom" constant="8" id="TfG-Xq-FRv"/>
+                            <constraint firstAttribute="bottom" secondItem="6lT-LF-OTd" secondAttribute="bottom" id="WdC-PG-cTW"/>
+                            <constraint firstItem="X5t-gF-dd5" firstAttribute="leading" secondItem="Fjz-Z6-lhG" secondAttribute="leadingMargin" id="ZiS-WJ-sKa"/>
+                            <constraint firstItem="JoS-3C-Jkv" firstAttribute="centerX" secondItem="Fjz-Z6-lhG" secondAttribute="centerX" id="chK-DK-avZ"/>
+                            <constraint firstItem="1n0-bx-IRh" firstAttribute="top" secondItem="JoS-3C-Jkv" secondAttribute="bottom" constant="8" id="cou-Ic-Sem"/>
+                            <constraint firstItem="o8l-TC-dV3" firstAttribute="centerX" secondItem="Fjz-Z6-lhG" secondAttribute="centerX" id="ghT-YJ-b20"/>
+                            <constraint firstItem="s4r-2F-l9k" firstAttribute="top" secondItem="JoS-3C-Jkv" secondAttribute="bottom" constant="8" id="kW7-lA-s5n"/>
+                            <constraint firstItem="tqj-Kr-fdd" firstAttribute="leading" secondItem="Fjz-Z6-lhG" secondAttribute="leadingMargin" id="ljU-qe-Cyw"/>
+                            <constraint firstItem="tqj-Kr-fdd" firstAttribute="top" secondItem="X5t-gF-dd5" secondAttribute="bottom" constant="6.5" id="nPP-OE-0Nm"/>
+                            <constraint firstItem="JoS-3C-Jkv" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Fjz-Z6-lhG" secondAttribute="leadingMargin" id="qTu-Kj-lpm"/>
+                            <constraint firstItem="o8l-TC-dV3" firstAttribute="top" secondItem="JoS-3C-Jkv" secondAttribute="bottom" constant="82" id="sG9-lP-b0Q"/>
+                            <constraint firstItem="nhv-Sl-pYA" firstAttribute="centerX" secondItem="Fjz-Z6-lhG" secondAttribute="centerX" id="scR-BH-f9k"/>
+                            <constraint firstItem="6lT-LF-OTd" firstAttribute="top" secondItem="Fjz-Z6-lhG" secondAttribute="top" id="vgw-lD-sjN"/>
+                            <constraint firstItem="6lT-LF-OTd" firstAttribute="leading" secondItem="Fjz-Z6-lhG" secondAttribute="leading" id="vrH-XO-NDr"/>
+                            <constraint firstItem="X5t-gF-dd5" firstAttribute="top" secondItem="JNB-aX-MpK" secondAttribute="bottom" constant="34" id="yaZ-o0-xuv"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4TZ-LL-pS0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1278.75" y="128.75"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="65d-pj-JOQ">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="mkr-LM-2Sg" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="efe-uY-hXD">
+                        <rect key="frame" x="0.0" y="20" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="KKs-3I-4WD"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ycL-tb-N1x" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-326" y="119"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="background" width="2400" height="2000"/>
+        <image name="facebook" width="96" height="96"/>
+        <image name="income" width="96" height="96"/>
+        <image name="mail" width="96" height="96"/>
+        <image name="rate" width="96" height="96"/>
+        <image name="tax" width="96" height="96"/>
+        <image name="twitter" width="96" height="96"/>
+        <image name="wallet" width="96" height="96"/>
+        <image name="year" width="96" height="96"/>
+    </resources>
 </document>

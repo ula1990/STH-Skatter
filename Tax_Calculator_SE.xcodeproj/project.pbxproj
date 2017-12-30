@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		750A30951F15765F00EF4B33 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 750A30941F15765F00EF4B33 /* SecondViewController.swift */; };
+		7558F8D11F5EA36000F56E71 /* RoundButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7558F8D01F5EA36000F56E71 /* RoundButton.swift */; };
+		7558F8D21F5EA36000F56E71 /* RoundButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7558F8D01F5EA36000F56E71 /* RoundButton.swift */; };
+		7558F8D31F5EA36000F56E71 /* RoundButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7558F8D01F5EA36000F56E71 /* RoundButton.swift */; };
+		7558F8F11F5FF9F900F56E71 /* Roundlabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7558F8F01F5FF9F900F56E71 /* Roundlabel.swift */; };
+		7558F8F21F5FF9F900F56E71 /* Roundlabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7558F8F01F5FF9F900F56E71 /* Roundlabel.swift */; };
+		7558F8F31F5FF9F900F56E71 /* Roundlabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7558F8F01F5FF9F900F56E71 /* Roundlabel.swift */; };
+		75A742161F61548F00A7E932 /* MailButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75A742151F61548F00A7E932 /* MailButton.swift */; };
 		75C864A91F12CF7400661E82 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75C864A81F12CF7400661E82 /* AppDelegate.swift */; };
 		75C864AB1F12CF7400661E82 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75C864AA1F12CF7400661E82 /* ViewController.swift */; };
 		75C864AE1F12CF7400661E82 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 75C864AC1F12CF7400661E82 /* Main.storyboard */; };
@@ -34,6 +42,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		750A30941F15765F00EF4B33 /* SecondViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+		7558F8D01F5EA36000F56E71 /* RoundButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundButton.swift; sourceTree = "<group>"; };
+		7558F8F01F5FF9F900F56E71 /* Roundlabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Roundlabel.swift; sourceTree = "<group>"; };
+		75A742151F61548F00A7E932 /* MailButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MailButton.swift; sourceTree = "<group>"; };
 		75C864A51F12CF7400661E82 /* Tax_Calculator_SE.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tax_Calculator_SE.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		75C864A81F12CF7400661E82 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		75C864AA1F12CF7400661E82 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -47,6 +59,7 @@
 		75C864C41F12CF7400661E82 /* Tax_Calculator_SEUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Tax_Calculator_SEUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		75C864C81F12CF7400661E82 /* Tax_Calculator_SEUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tax_Calculator_SEUITests.swift; sourceTree = "<group>"; };
 		75C864CA1F12CF7400661E82 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		75C865011F13AD8600661E82 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,11 +111,15 @@
 			isa = PBXGroup;
 			children = (
 				75C864A81F12CF7400661E82 /* AppDelegate.swift */,
+				750A30941F15765F00EF4B33 /* SecondViewController.swift */,
 				75C864AA1F12CF7400661E82 /* ViewController.swift */,
 				75C864AC1F12CF7400661E82 /* Main.storyboard */,
 				75C864AF1F12CF7400661E82 /* Assets.xcassets */,
 				75C864B11F12CF7400661E82 /* LaunchScreen.storyboard */,
 				75C864B41F12CF7400661E82 /* Info.plist */,
+				7558F8D01F5EA36000F56E71 /* RoundButton.swift */,
+				7558F8F01F5FF9F900F56E71 /* Roundlabel.swift */,
+				75A742151F61548F00A7E932 /* MailButton.swift */,
 			);
 			path = Tax_Calculator_SE;
 			sourceTree = "<group>";
@@ -188,23 +205,26 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0830;
-				LastUpgradeCheck = 0830;
+				LastUpgradeCheck = 0900;
 				ORGANIZATIONNAME = "Ulad Daratsiuk";
 				TargetAttributes = {
 					75C864A41F12CF7400661E82 = {
 						CreatedOnToolsVersion = 8.3.3;
 						DevelopmentTeam = Z4NGAZXKWW;
+						LastSwiftMigration = 0900;
 						ProvisioningStyle = Automatic;
 					};
 					75C864B81F12CF7400661E82 = {
 						CreatedOnToolsVersion = 8.3.3;
 						DevelopmentTeam = Z4NGAZXKWW;
+						LastSwiftMigration = 0900;
 						ProvisioningStyle = Automatic;
 						TestTargetID = 75C864A41F12CF7400661E82;
 					};
 					75C864C31F12CF7400661E82 = {
 						CreatedOnToolsVersion = 8.3.3;
 						DevelopmentTeam = Z4NGAZXKWW;
+						LastSwiftMigration = 0900;
 						ProvisioningStyle = Automatic;
 						TestTargetID = 75C864A41F12CF7400661E82;
 					};
@@ -262,8 +282,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7558F8D11F5EA36000F56E71 /* RoundButton.swift in Sources */,
+				750A30951F15765F00EF4B33 /* SecondViewController.swift in Sources */,
+				75A742161F61548F00A7E932 /* MailButton.swift in Sources */,
 				75C864AB1F12CF7400661E82 /* ViewController.swift in Sources */,
 				75C864A91F12CF7400661E82 /* AppDelegate.swift in Sources */,
+				7558F8F11F5FF9F900F56E71 /* Roundlabel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -271,6 +295,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7558F8D21F5EA36000F56E71 /* RoundButton.swift in Sources */,
+				7558F8F21F5FF9F900F56E71 /* Roundlabel.swift in Sources */,
 				75C864BE1F12CF7400661E82 /* Tax_Calculator_SETests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -279,6 +305,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7558F8D31F5EA36000F56E71 /* RoundButton.swift in Sources */,
+				7558F8F31F5FF9F900F56E71 /* Roundlabel.swift in Sources */,
 				75C864C91F12CF7400661E82 /* Tax_Calculator_SEUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -303,6 +331,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				75C864AD1F12CF7400661E82 /* Base */,
+				75C865011F13AD8600661E82 /* en */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -328,7 +357,9 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
@@ -336,7 +367,11 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -359,12 +394,13 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = "";
 			};
 			name = Debug;
 		};
@@ -378,7 +414,9 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
@@ -386,7 +424,11 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -403,10 +445,11 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = "";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -417,10 +460,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = Z4NGAZXKWW;
 				INFOPLIST_FILE = Tax_Calculator_SE/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "Uladzislau-Daratsiuk.Tax-Calculator-SE";
+				PRODUCT_BUNDLE_IDENTIFIER = uladzislau.daratsiuk.sthskatter;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = Off;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -430,10 +476,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = Z4NGAZXKWW;
 				INFOPLIST_FILE = Tax_Calculator_SE/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "Uladzislau-Daratsiuk.Tax-Calculator-SE";
+				PRODUCT_BUNDLE_IDENTIFIER = uladzislau.daratsiuk.sthskatter;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = Off;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -447,7 +496,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Uladzislau-Daratsiuk.Tax-Calculator-SETests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = Off;
+				SWIFT_VERSION = 4.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Tax_Calculator_SE.app/Tax_Calculator_SE";
 			};
 			name = Debug;
@@ -462,7 +512,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Uladzislau-Daratsiuk.Tax-Calculator-SETests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = Off;
+				SWIFT_VERSION = 4.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Tax_Calculator_SE.app/Tax_Calculator_SE";
 			};
 			name = Release;
@@ -476,7 +527,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Uladzislau-Daratsiuk.Tax-Calculator-SEUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = Off;
+				SWIFT_VERSION = 4.0;
 				TEST_TARGET_NAME = Tax_Calculator_SE;
 			};
 			name = Debug;
@@ -490,7 +542,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Uladzislau-Daratsiuk.Tax-Calculator-SEUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = Off;
+				SWIFT_VERSION = 4.0;
 				TEST_TARGET_NAME = Tax_Calculator_SE;
 			};
 			name = Release;
@@ -514,6 +567,7 @@
 				75C864CF1F12CF7400661E82 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		75C864D01F12CF7400661E82 /* Build configuration list for PBXNativeTarget "Tax_Calculator_SETests" */ = {
 			isa = XCConfigurationList;
@@ -522,6 +576,7 @@
 				75C864D21F12CF7400661E82 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		75C864D31F12CF7400661E82 /* Build configuration list for PBXNativeTarget "Tax_Calculator_SEUITests" */ = {
 			isa = XCConfigurationList;
@@ -530,6 +585,7 @@
 				75C864D51F12CF7400661E82 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
