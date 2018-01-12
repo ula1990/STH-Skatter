@@ -14,8 +14,6 @@ import Foundation
 
 
 @objc class ViewController: UIViewController {
-    
-    
 
 
     @IBOutlet weak var output: UILabel!
@@ -34,6 +32,8 @@ import Foundation
     
     @IBOutlet weak var annualLbl: UILabel!
     
+
+    
     
     //USER DEFAULTS
     
@@ -42,6 +42,14 @@ import Foundation
     let nettL = "nettL"
     let addI = "addI"
     let outputL = "outputL"
+    
+    
+    func saveLabelsValues(){
+        defaults.set(output.text!, forKey: outputL)
+        defaults.set(taxLbl.text!, forKey: taxL)
+        defaults.set(addInfo.text!, forKey: addI)
+        defaults.set(input.text!, forKey: nettL)
+    }
 
     
     //PART0 Coefficients for Netto and Tax
@@ -1337,10 +1345,7 @@ import Foundation
                             output.text = numberFormatter.string (from: NSNumber(value:(sum())))
                             taxLbl.text = numberFormatter.string (from: NSNumber(value:(sumTax())))
                             addInfo.text = numberFormatter.string (from: NSNumber(value:(12*sum())))!
-                            defaults.set(output.text!, forKey: outputL)
-                            defaults.set(taxLbl.text!, forKey: taxL)
-                            defaults.set(addInfo.text!, forKey: addI)
-                            defaults.set(input.text!, forKey: nettL)
+                            saveLabelsValues()
                     }
         }else {
                     input.text = number
@@ -1356,10 +1361,7 @@ import Foundation
         taxLbl.text = output.text
         addInfo.text = output.text
         stillTyping = false
-        defaults.set(output.text!, forKey: outputL)
-        defaults.set(taxLbl.text!, forKey: taxL)
-        defaults.set(addInfo.text!, forKey: addI)
-        defaults.set(input.text!, forKey: nettL)
+        saveLabelsValues()
     }
     
     //ABOUT BUTTON
