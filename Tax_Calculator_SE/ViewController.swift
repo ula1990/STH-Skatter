@@ -57,7 +57,6 @@ import Foundation
           let number = sender.currentTitle!
 
                 if stillTyping{
-                    
                         if (input.text?.count)! < 5 {
         
                             input.text = input.text! + number
@@ -1352,7 +1351,7 @@ import Foundation
 //Clear Button
     
     @IBAction func clearButton(_ sender: UIButton) {
-        output.text = " "
+        output.text = ""
         input.text = output.text
         taxLbl.text = output.text
         addInfo.text = output.text

@@ -51,6 +51,8 @@ import StoreKit
     }
     
     
+    // EMAIL BUTTON
+    
     @IBAction func sendEmail(_ sender: Any) {
         let mailComposeViewController = configureMailController()
         if MFMailComposeViewController.canSendMail(){
