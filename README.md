@@ -1,6 +1,6 @@
 # STH-Skatter
 Our Application that's a simple way to get information about your clean income in Stockholm Area in 2018.
-That application was created in Xcode 9.2 and with Swift 4.0.3.
+That application was created in Xcode 9.2 and with Swift 4.0.3. Algorithm for taxes was implemented in the released version and it's replaced all if,else on one small function
 
 <h2>Released in AppStore in 2017</h2>
 
